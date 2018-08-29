@@ -1,1 +1,349 @@
-/* You can add global styles to this file, and also import other style files */
+//VARIABLES:
+
+// Here we have two variables, defined by $ symbol
+// Variables store info you want to use throughout style sheet
+$font-stack: helvetica, san-serif;
+$primary-color: #333;
+
+
+body {
+  // single line comment
+  font: 100% $font-stack;
+  /* multi line comment */
+  color: $primary-color;
+}
+
+
+// DATA-TYPES:
+
+//// Null
+//$i-am-null: null;
+//
+////Booleans
+//$i-am-true: true;
+//$i-am-false: false;
+//
+//// Number
+//$a-number: 7;
+//
+//// Strings
+//$names: 'Raymond Alake';
+//$name-together: 'Raymond' + 'Alake';
+//
+//// Color
+//$color: lighten(white, 15%); // #b8dc70
+//$venus: #998099;
+
+// ARITHMETIC OPERATORS:
+
+//h1 {
+//  font-size: 4px + 2 ;
+//}
+//
+//h2 {
+//  font-size: 4px - 2;
+//}
+//
+//h3 {
+//  font-size: (10/2);
+//  opacity: random(4) / 5;
+//  padding-right: 2px / 4px + 3px;
+//}
+//
+//h4 {
+//  width: 3px * 5 + 5px;
+//  width: 3 * (5px + 5px);
+//  width: 3px + (6px / 2) * 3;
+//}
+
+// EQUALITY OPERATORS:
+//@mixin font-fl($font) {
+//  &:after {
+//    @if (type-of($font) == string) {
+//      content: 'My font is: #{$font}.';
+//    } @else {
+//      content: 'Sorry, the argument #{$font} is a #{type_of($font)}.';
+//    }
+//  }
+//}
+//
+//h2 {
+//  @include font-fl(san-serif);
+//}
+
+// LOGICAL OPERATORS:
+
+//$var1: 'foo';
+//$var2: 'bazxsd';
+//
+//@mixin font-fl() {
+//  &:after {
+//    @if $var1 == 'foo' and $var2 == 'bar' {
+//      content: 'var1 and var2 are true';
+//    } @else {
+//      content: 'var1 and var2 are flase';
+//    }
+//  }
+//}
+//
+//h2 {
+//  @include font-fl();
+//}
+//
+
+// COLOR OPERATIONS:
+
+//h1 {
+//  color: #333333 + #839283;
+//}
+//
+// When using rgba --> the a (alpha value) has to be the same value
+
+
+// AMPERSAND (&) --> parent child selector:
+//
+//.button {
+//  &:visited { color: white; }
+//  &:hover { color: white; }
+//  &:active { color: white; }
+//}
+//
+//.button {
+//  & > span { color: white; }
+//  & + span { color: white; }
+//  & ~ span { color: white; }
+//}
+//
+//.btn {
+//  &-primary { color: white; }
+//  &-secondary { color: white; }
+//}
+//
+//.button {
+//  body.page-about & { color: white; }
+//}
+
+// INTERPOLATION
+
+
+// PARTIALS :
+
+//@import 'partials/_reset';
+//@import 'partials/_buttons';
+
+
+// IMPORT:
+
+// Imports to top of file
+//@import 'partials/_reset';
+
+// Imports to main tag <main>
+//#main {
+//  @import "partials/_buttons";
+//}
+
+
+//// MIXINS --> allows grouped CSS declaration which can be reused throughout site:
+//
+//$font-base: 16px;
+//
+//@mixin sample {
+//  font-size: $font-base;
+//}
+//
+//@mixin large-text {
+//  font: {
+//    family: Arial;
+//    size: 20px;
+//    weight: bold;
+//  }
+//
+//  color: #444444;
+//
+//}
+//
+//p {
+//  @include sample;
+//}
+//
+//h1 {
+//  @include large-text;
+//}
+//
+//
+//// You can nest mixins within each other
+//
+//@mixin highLighted-background {
+//  background: lightblue;
+//}
+//
+//@mixin header-text {
+//  font-size: 32px;
+//}
+//
+//@mixin compound {
+//  @include highLighted-background;
+//  @include header-text;
+//}
+
+
+//// Mixins with Arguments
+//
+//$font-base: 12px;
+//
+//@mixin linx ($link, $visit, $hover, $active) {
+//  a {
+//    color: $link;
+//
+//    &:visited {
+//      color: $visit;
+//    }
+//
+//    &:hover {
+//      color: $hover;
+//    }
+//
+//    &:active {
+//      color: $active;
+//    }
+//  }
+//}
+//
+//#main {
+//  @include linx(white, blue, green, red);
+//}
+
+
+//// INHERITANCE --> helps css share a set of properties :
+//
+//.message {
+//  border: 1px solid #cccccc;
+//  padding: 10px;
+//  color: #333333;
+//}
+//
+//.success {
+//  @extend .message;
+//  border-color: green;
+//}
+//
+//.error {
+//  @extend .message;
+//  border-color: red;
+//}
+//
+//.warning {
+//  @extend .message;
+//  border-color: yellow;
+//}
+//
+//
+//// Chaining extends
+//
+//.error {
+//  border: 1px #f00;
+//  background-color: #fdd;
+//}
+//
+//.seriousError {
+//  @extend .error;
+//  border-width: 3px;
+//}
+//
+//.criticalError {
+//  @extend .seriousError;
+//  position: fixed;
+//  top: 10%;
+//  left: 10%;
+//  right: 10%;
+//}
+
+//// PLACEHOLDERS
+//
+//%foo {
+//  color: red;
+//}
+//
+//.bar {
+//  @extend %foo;
+//  background: blue;
+//}
+//
+//.baz {
+//  @extend %foo;
+//  background: yellow;
+//}
+
+// MIXIN VS PLACEHOLDERS
+// --> Don't use mixin to share same css with a number of elements: Not dry code
+// --> use placeholder and extend to produce less css when sharing css with multi elements
+// --> Use mixins when you want output to change depending on how you call em
+// --> Use mixins with arguments
+
+
+//// CSS RULES:
+//
+//#main p {
+//  color: aqua;
+//  width: 98%;
+//
+//  //#main p .red-box
+//  .red-box {
+//    background-color: aquamarine;
+//    color: beige;
+//  }
+//}
+
+
+//// NESTING
+//
+//a {
+//  font-weight: bold;
+//  text-decoration: none;
+//  &:hover { text-decoration: underline; }
+//  body.firefox & { font-weight: normal; }
+//}
+//
+////a:hover
+////body.firefox a
+//
+//#main {
+//  background: lightgray;
+//  &-sidebar {
+//    color: aquamarine;
+//  }
+//}
+////#main-sidebar
+
+
+//// NESTING PROPERTIES
+//
+//.funky {
+//  font: {
+//    family: fantasy;
+//    size: 42em;
+//    weight: bold;
+//  }
+//}
+//// font-family || font-size || font-weight
+
+
+// LIST:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
