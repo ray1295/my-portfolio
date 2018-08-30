@@ -1,0 +1,58 @@
+html, body {
+  height: 100%;
+  display: block;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  color: #444444;
+  font-size: 14px;
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// Abstract 
+@import "stylesheets/abstract/functions";
+@import "stylesheets/abstract/mixins";
+@import "stylesheets/abstract/placeholders";
+@import "stylesheets/abstract/variables";
+
+// Base
+@import "stylesheets/base/reset";
+@import "stylesheets/base/typography";
+
+// Utilities
+@import "stylesheets/utilities/buttons";
+@import "stylesheets/utilities/carousel";
+@import "stylesheets/utilities/cover";
+@import "stylesheets/utilities/dropdowns";
+
+// Layouts 
+@import "stylesheets/layouts/footer";
+@import "stylesheets/layouts/forms";
+@import "stylesheets/layouts/grids";
+@import "stylesheets/layouts/header";
+@import "stylesheets/layouts/navigation";
+@import "stylesheets/layouts/sidebar";
+
+// Pages 
+@import "stylesheets/pages/contact";
+@import "stylesheets/pages/home";
+
+// Themes 
+@import "stylesheets/themes/admin";
+@import "stylesheets/themes/theme";
+
+// Vendors
+@import "stylesheets/vendors/bootstrap";
+@import "stylesheets/vendors/jquery-ui";
+
+// //Components
+// @import "../app/footer/footer.component.scss";
+// @import "../app/navigation/navigation.component.scss";
+

@@ -6,9 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  myName = 'Raymond Alake';
-  clients = ['Wevative', 'Mochunks', 'Hvly'];
-  latestClient = this.clients[0];
   constructor() { }
 
   ngOnInit() {
