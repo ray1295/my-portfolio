@@ -1,6 +1,16 @@
 @media only screen and (min-width: 320px) {
-    .lead {
-        font-size: 1.2rem;
+    .lead-text {
+        margin-top: 1rem;
+        font-size: 1.25vw;
+        line-height: 180%;
+    }
+    .lead-categories {
+        background-color: #444444;
+        color: white;
+        border-radius: 3px;
+        padding: 2px 4px;    
+        margin-right: 5px;
+        font-size: 12px;
     }
     .name-title {
         margin-bottom: 0;
@@ -8,8 +18,22 @@
 }
   
 @media only screen and (min-width: 600px) {
-    .lead {
+    .lead-text {
         font-size: 1.414rem;
+    }
+    .intro {
+        position: fixed;
+        top: 10%
+    }
+    .about{
+        position: absolute;
+        left: 50%;
+        right: 10%;
+        }
+    .about h2 {
+        font-size: 1.5rem;
+        line-height: 140%;
+        margin-bottom: 10%;
     }
 }
   

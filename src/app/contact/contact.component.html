@@ -1,58 +1,62 @@
 <div class="row">
 
   <div class="col-md-6">
-    <h1>Contact me</h1>
-    <p>If you have any questions please don't hesistate to contact using form below</p>
+    <div *ngIf="!name; else forminfo">
+      <h1>Contact me</h1>
+      <p>If you have any questions please don't hesistate to contact using form below</p>
+      <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
+        <ul class="form-container">
 
-    <ul class="form-container">
-      <li class="half">
-        <mat-form-field appearance="outline">
-          <mat-label>Name</mat-label>
-          <input matInput placeholder="Name" type="text" [formControl]="name" required>
-        </mat-form-field>
-      </li>
+          <li class="half">
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="John Hendrix" type="text" formControlName="name">
+              <mat-hint class="alert" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched"> {{ titleAlert }}</mat-hint>
 
-      <li class="half float-right">
-        <mat-form-field appearance="outline">
-          <mat-label>Email your email</mat-label>
-          <input matInput placeholder="you@example.com" type="email" [formControl]="email" required>
-        </mat-form-field>
-      </li>
-       
-      <br>
+            </mat-form-field>
+          </li>
 
-      <li>
-        <mat-form-field appearance="outline">
-          <mat-label>Subject</mat-label>
-          <input matInput placeholder="Subject" >
-        </mat-form-field>
-      </li>
+          <li class="half float-right">
+            <mat-form-field appearance="outline">
+              <mat-label>Email your email</mat-label>
+              <input matInput placeholder="you@example.com" type="email" formControlName="email">
+            </mat-form-field>
+          </li>
 
-      <li>
-        <mat-form-field appearance="outline">
-          <mat-label>Message</mat-label>
-          <textarea matInput placeholder="Raymond you're so cool"></textarea>
-          <mat-hint>Hint</mat-hint>
-          </mat-form-field>
-      </li>
+          <li>
+            <mat-form-field appearance="outline">
+              <mat-label>Subject</mat-label>
+              <input matInput placeholder="Subject" formControlName="subject">
+            </mat-form-field>
+          </li>
 
-      <li>
-        <mat-form-field appearance="outline">
-          <mat-select placeholder="Select">
-          <mat-option value="option">Option</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </li>
-      
-      <button mat-stroked-button >
-        Send
-      </button>
-    </ul>
+          <li>
+            <mat-form-field appearance="outline">
+              <mat-label>Message</mat-label>
+              <textarea matInput placeholder="Raymond you're so cool" formControlName="message"></textarea>
+              <mat-hint class="alert" *ngIf="!rForm.controls['message'].valid && rForm.controls['message'].touched">
+                  You must specify a message that's between 30 and 500 characters.
+              </mat-hint>
+            </mat-form-field>
+          </li>
+
+          <button mat-stroked-button type="submit" value="Send" [disabled]="!rForm.valid">Send</button>
+
+        </ul>
+      </form>
+    </div>
   </div>
 
   <div class="col-md-6">
-
+    <ng-template #forminfo>
+      <h1>Message sent</h1>
+      <div class="form-container">
+          <h3>{{ name }}</h3>
+          <p>{{ email }}</p>
+          <p>{{ subject }}</p>
+          <p>{{ message }}</p>
+      </div>
+    </ng-template>
   </div>
-
 
 </div>
