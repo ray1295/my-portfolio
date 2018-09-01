@@ -10,14 +10,15 @@ export class ContactComponent implements OnInit {
   rForm: FormGroup;
   post:any; // Property for submitted form
   name:'';
-  titleAlert: 'This field is required';
+  titleAlert = 'This field is required.';
+  titleAlertMessage = 'This field is required with a meesage.'
   email:'';
   subject:'';
   message: '';
 
   constructor(private fb: FormBuilder) { 
     this.rForm = fb.group({
-      'name' : [null, Validators.required],
+      'name' : [null, Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(20)])],
       'email' : [null, Validators.required],
       'subject' : [null, Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(20)])],
       'message' : [null, Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(500)])],

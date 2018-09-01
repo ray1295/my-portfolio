@@ -3,23 +3,32 @@
   <div class="col-md-6">
     <div *ngIf="!name; else forminfo">
       <h1>Contact me</h1>
-      <p>If you have any questions please don't hesistate to contact using form below</p>
+      <p>If you have any questions please don't hesistate to reach out using form below or follow me on 
+        <a href="https://www.linkedin.com/in/raymond-alake-98522488/">
+          <b>Linkedin</b>
+        </a>
+      </p>
       <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
         <ul class="form-container">
 
           <li class="half">
             <mat-form-field appearance="outline">
               <mat-label>Name</mat-label>
-              <input matInput placeholder="John Hendrix" type="text" formControlName="name">
-              <mat-hint class="alert" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched"> {{ titleAlert }}</mat-hint>
-
+              <input matInput placeholder="John Hendrix" type="text" formControlName="name" required>
+              <mat-hint *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">
+                {{ titleAlert }}
+                <br> Name must be between 3 and 20 characters.
+              </mat-hint>
             </mat-form-field>
           </li>
 
           <li class="half float-right">
             <mat-form-field appearance="outline">
               <mat-label>Email your email</mat-label>
-              <input matInput placeholder="you@example.com" type="email" formControlName="email">
+              <input matInput placeholder="you@example.com" type="email" formControlName="email" email required>
+              <mat-hint *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">
+                {{ titleAlert }}
+              </mat-hint>
             </mat-form-field>
           </li>
 
@@ -27,6 +36,9 @@
             <mat-form-field appearance="outline">
               <mat-label>Subject</mat-label>
               <input matInput placeholder="Subject" formControlName="subject">
+              <mat-hint *ngIf="!rForm.controls['subject'].valid && rForm.controls['message'].touched">
+                {{ titleAlertMessage }}. You must specify a subject title that's between 4 and 20 characters.
+               </mat-hint>
             </mat-form-field>
           </li>
 
@@ -34,8 +46,8 @@
             <mat-form-field appearance="outline">
               <mat-label>Message</mat-label>
               <textarea matInput placeholder="Raymond you're so cool" formControlName="message"></textarea>
-              <mat-hint class="alert" *ngIf="!rForm.controls['message'].valid && rForm.controls['message'].touched">
-                  You must specify a message that's between 30 and 500 characters.
+              <mat-hint *ngIf="!rForm.controls['message'].valid && rForm.controls['message'].touched">
+                You must specify a message that's between 30 and 500 characters.
               </mat-hint>
             </mat-form-field>
           </li>
@@ -51,10 +63,10 @@
     <ng-template #forminfo>
       <h1>Message sent</h1>
       <div class="form-container">
-          <h3>{{ name }}</h3>
-          <p>{{ email }}</p>
-          <p>{{ subject }}</p>
-          <p>{{ message }}</p>
+        <h3>{{ name }}</h3>
+        <p>{{ email }}</p>
+        <p>{{ subject }}</p>
+        <p>{{ message }}</p>
       </div>
     </ng-template>
   </div>

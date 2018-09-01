@@ -2,16 +2,22 @@
     .h1, h1 {
         font-size: 3rem;
         line-height: 3rem;
-        margin-top: 2rem;
         font-weight:bolder; 
     }
 }
   
 @media only screen and (min-width: 600px) {
     .h1, h1 {
-        font-size: 6.242rem;
-        line-height: 6rem;
-        margin-top: 3rem;
+        font-size: 5.242rem;
+        line-height: 1.2;
+        margin-top: 5%;
+    }
+    .h2, h2 {
+        font-size: 3rem;
+        margin: 0;
+    }
+    .h3, h3 {
+        font-size: 1.5rem;
     }
 }
   
