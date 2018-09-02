@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-
   constructor() { }
 
-  ngOnInit() {
+  scrollWin() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }
+
+  ngOnInit() { }
 
 }
