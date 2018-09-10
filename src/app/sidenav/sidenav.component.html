@@ -1,10 +1,10 @@
 <mat-sidenav-container class="sidenav-container ">
   <!-- Sidenav content -->
   <mat-sidenav mode="side" opened>
-    <a class="logo-container" routerLink="/home">
+    <a class="logo-container" routerLink="/">
       <img class="logo-ra" src="../../assets/images/ra-logo.png" alt="Raymond Alake logo">
     </a>
-    <a routerLink="/home" routerLinkActive="active" class="side-links" matTooltip="Home" matTooltipPosition="right">
+    <a routerLink="/" routerLinkActive="active" class="side-links" matTooltip="Home" matTooltipPosition="right">
       <i class="material-icons">home</i>
     </a>
     <a routerLink="/projects" routerLinkActive="active" class="side-links" matTooltip="Projects" matTooltipPosition="right">
@@ -14,10 +14,13 @@
       <i class="material-icons">mail_outline</i>
     </a>
   </mat-sidenav>
+  <!-- End of sidenav content -->
 
   <!-- Body content -->
   <mat-sidenav-content>
     <!-- Router view goes here -->
     <router-outlet></router-outlet>
-  </mat-sidenav-content>
+ </mat-sidenav-content>
+   <!-- End of body content -->
+
 </mat-sidenav-container>
