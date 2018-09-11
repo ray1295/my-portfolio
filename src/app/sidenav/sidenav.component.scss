@@ -28,7 +28,7 @@
     background-color: #fafafa;
   }
   mat-sidenav a.side-links {
-    color: #000000;
+    color: #444444;
     width: 35px;
     height: 35px;
     display: inline-block;
@@ -37,12 +37,12 @@
   mat-sidenav a.side-links.active,
   mat-sidenav a.side-links:hover,
   mat-sidenav a.side-links:focus {
-    background-color:#4444444a;
+    background-color:#ddd;
     border-radius: 50%;
   }
   mat-sidenav i {
     vertical-align: text-top;
-    line-height: 1.25;
+    line-height: 1.25 !important;
   }
 }
 

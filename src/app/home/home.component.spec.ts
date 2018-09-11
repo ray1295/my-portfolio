@@ -22,4 +22,8 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have first name', () => {
+    expect(component.firstName).toBe('Raymond');
+  });
 });
