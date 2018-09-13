@@ -14,13 +14,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent,
     routingComponents
   ],
   imports: [

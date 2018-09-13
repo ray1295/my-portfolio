@@ -11,9 +11,15 @@
         background-color: #444444;
         color: white;
         border-radius: 3px;
-        padding: 4px 8px;    
-        margin-right: 5px;
+        padding: 4px 8px;
+        margin: 2px;
         font-size: 12px;
+        line-height: 1.5;
+        display: inline-flex;
+        justify-content: space-evenly;
+    }
+    .lead-email {
+        text-decoration: underline;
     }
     .about {
         top: 55%;
@@ -25,6 +31,25 @@
         font-weight: 600;
         font-size: 1rem;
         line-height: 150%;
+    }
+    .projects-container {
+        display: flex;
+        justify-content: space-around;
+        a {
+            text-align: center;
+        }
+        img {
+            height: 100px;
+        }
+        h3 {
+            font-weight: 700;
+        }
+    }
+    .social-link--container {
+        i {
+            font-size: 32px;
+            margin-right: 24px;
+        }
     }
 }
   
@@ -41,26 +66,61 @@
 
     .about h2 {
         font-size: 1.414rem;
-        margin-bottom: 5%;
     }
     .lead-text {
         font-size: 1.2rem;
     }
-    .lead-text-persona {
-        max-width: 530px;
-    }   
 }
   
 @media only screen and (min-width: 1024px) {
     .intro {
-        width: 30%;
-        top: 22%;
+        width: 40%;
     }
     .about{
         position: absolute;
-        left: 40%;
+        left: 50%;
         top: 10%;
+        width: 50%;
+        height: 50%;
         margin-bottom: 5%;
     }
 }
 
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    column-gap: 10px;
+    row-gap: 1em;
+    height: 100%;
+  .block {
+      
+  }
+  .mo-slice {
+    background-image: URL('../../assets/images/mochunksslice.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+  } 
+  .block-info {
+      display: none;
+      background-color: purple;
+      height: 100%;
+      padding: 1rem;
+      color: white;
+      position: relative;
+      hr {
+          width: 15%;
+          float: left;
+          border-color: white;
+          border-width: 2px;
+      }
+      p {
+          bottom: 0;
+          position: absolute;
+          padding-right: 1rem;
+      }
+  }
+  .block:hover .block-info {
+      display: block;
+  }
+} 

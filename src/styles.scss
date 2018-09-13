@@ -39,20 +39,11 @@ body {
 @import "stylesheets/layouts/navigation";
 @import "stylesheets/layouts/sidebar";
 
-// Pages 
-@import "stylesheets/pages/contact";
-@import "stylesheets/pages/home";
-
-// Themes 
-@import "stylesheets/themes/admin";
-@import "stylesheets/themes/theme";
-
 // Vendors
 @import "stylesheets/vendors/bootstrap";
 @import "stylesheets/vendors/jquery-ui";
 
 // //Components
-@import "app/sidenav/sidenav.component.scss";
 @import "app/home/home.component.scss";
 @import "app/projects/projects.component.scss";
 
