@@ -2,7 +2,7 @@
 @media only screen and (min-width: 600px) {}
 @media only screen and (min-width: 1024px) {}
 .project-container {
-    margin: 2% 0;
+    margin-bottom: 5%;
 }
 .project-tile{
     width: 100%;
@@ -10,23 +10,12 @@
     position: relative;
     display: inline-block;
     overflow: hidden;
-    margin-top: 5%;
-    border-top: 1px solid #4444444a;
+    margin-top: 2%;
 }
 .tile-container {
     height: 100%;
     display: flex;
     justify-content: space-evenly;
-}
-.project-info{
-    width: 10%;
-    height: 100%;
-    padding: 2% 0;
-    text-align: center;
-    .project-number {
-        color: #4444444a;
-        margin-top: 0; 
-    }
 }
 .project-assetCon{
     width: 60%;
@@ -39,16 +28,12 @@
     }
 }
 .project-desCon{
-    width: 30%;
+    width: 40%;
     height: 100%;
-    padding: 2% 20px;
+    padding: 0 20px;
     .des-name {
-        color: #4444444a;
         margin: 0;
         font-weight: 600;
-    }
-    img {
-        height: 100px;
     }
     .project-des {
         position: absolute;
@@ -63,8 +48,9 @@
     position: fixed;
     bottom: 15px;
     right: 20px;
-    transform: rotate(-90deg);
     border: none;
-    background: #fafafa;
-    font-size: 52px;
+    background: transparent;
+    i {
+        font-size: 32px;
+    }
 }
