@@ -8,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectsComponent implements OnInit {
   constructor() { }
 
-  scrollWin() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }
+  // scrollWin() {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth"
+  //   });
+  // }
 
   ngOnInit() { }
 
