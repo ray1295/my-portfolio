@@ -1,16 +1,38 @@
+/** Row **/
+.row {
+    margin-right: 0;
+    margin-left: 0; 
+}
+
+/** Unordered list **/
 ul {
     list-style: none;
     padding: 0;
 }
 
+/** Link **/
 a,
 a:hover {
     text-decoration: none;
     color: #444444 !important;
 }
 
+/** Buttons **/
 button {
     outline: none;
     cursor: pointer;
 }
 
+/** Carousel indicators **/
+.carousel-control-next, 
+.carousel-control-prev {
+    opacity: 1;
+}
+
+.carousel-control-next-icon, 
+.carousel-control-prev-icon {
+    background-size: 50% 100%;
+    background-color: #44444444;
+    padding: 20px;
+    border-radius: 50%;
+}
