@@ -7,6 +7,17 @@
     .h3, h3 {
         font-size: 1rem;
     }
+        /** Text overflow **/
+        .text-overflow{
+            width: 100%;
+            max-height: 80px;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+               text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: block-axis;
+        }
 }
   
 @media only screen and (min-width: 600px) {
@@ -21,16 +32,6 @@
     }
     .h3, h3 {
         font-size: 1.5rem;
-    }
-    /** Text overflow **/
-    .text-overflow{
-        width: 100%;
-        max-height: 80px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: block-axis;
     }
 }
 
