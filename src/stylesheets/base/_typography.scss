@@ -10,13 +10,6 @@
         /** Text overflow **/
         .text-overflow{
             width: 100%;
-            max-height: 80px;
-            overflow: hidden;
-            -o-text-overflow: ellipsis;
-               text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: block-axis;
         }
 }
   

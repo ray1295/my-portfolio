@@ -5,13 +5,12 @@
     .project-container {
         margin-bottom: 5%;
     }
-    .project-tile{
+    .project-tile {      
         width: 100%;
-        height: 400px;
         position: relative;
         display: inline-block;
         overflow: hidden;
-        margin-top: 2%;
+        margin: 5% 0;
     }
     .tile-container {
         height: 100%;
@@ -25,6 +24,7 @@
     .project-assetCon{
         width: 100%;
         height: 150px;
+        border: 1px solid #cccccc;
         .carousel-item {
             height: 150px;
         }
@@ -40,11 +40,7 @@
             font-weight: 600;
         }
         .project-des {
-            position: absolute;
-            bottom: 0;
-        }
-        .lead-categories {
-            visibility: hidden;
+            margin-bottom: 10%;
         }
     }
 }
@@ -53,7 +49,9 @@
     .project-h1{
         margin-top: 1em;
     }
-    
+    .project-tile{        
+        height: 402px;
+    }
     .scroll {
         position: fixed;
         bottom: 30px;
@@ -80,7 +78,7 @@
     .project-desCon{
         width: 40%;
         height: 100%;
-        padding: 0 20px;
+        padding: 0 20px 0 0;
         .lead-categories {
             visibility: visible;
             margin-bottom: 10px;
@@ -90,4 +88,8 @@
         display: none;
     }
 }
-@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) {
+    .lead-text__padding {
+        padding: 0px 40% 0 0;
+    }
+}

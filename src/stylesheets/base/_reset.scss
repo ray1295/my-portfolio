@@ -1,15 +1,14 @@
 @media only screen and (min-width: 320px) {
     .carousel-control-next, 
-.carousel-control-prev {
+    .carousel-control-prev {
     opacity: 1;
-}
-
+    }
     .carousel-control-next-icon, 
     .carousel-control-prev-icon {
         background-size: 50% 100%;
-        background-color: #44444444;
         padding: 15px;
         border-radius: 50%;
+        background-color: #181818;
     }
 }
 
