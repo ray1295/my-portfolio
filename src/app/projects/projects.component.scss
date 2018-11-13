@@ -49,9 +49,6 @@
     .project-h1{
         margin-top: 1em;
     }
-    .project-tile{        
-        height: 402px;
-    }
     .scroll {
         position: fixed;
         bottom: 30px;
@@ -91,5 +88,8 @@
 @media only screen and (min-width: 1024px) {
     .lead-text__padding {
         padding: 0px 40% 0 0;
+    }
+    .project-tile{        
+        height: 402px;
     }
 }
